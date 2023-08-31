@@ -1,0 +1,20 @@
+Question 1.
+
+select id 
+from ats where skill ='DS' 
+and id in (
+	select id 
+    from ats
+    where skill = 'SQL'
+	and id in (
+			select id 
+            from ats
+            where skill='Python'
+		));
+
+
+Question 2.
+
+select pid
+from product_info
+where pid not in (select pid from like_info);
